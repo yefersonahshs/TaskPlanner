@@ -3,9 +3,7 @@ package com.example.taskplanner.service
 import com.example.taskplanner.service.dto.TaskPlannerDto
 import com.example.taskplanner.service.dto.TaskTokenDto
 import retrofit2.Response
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
+import retrofit2.http.*
 
 interface TaskService {
 
@@ -15,6 +13,12 @@ interface TaskService {
 
     @GET("/api/task/all")
     suspend fun getTaskList(): Response<TaskPlannerDto>
+
+    @POST("api/task")
+    suspend fun saveTask(@Body taskDto: TaskPlannerDto): Response<TaskPlannerDto>
+
+    @PUT("api/task/{id}")
+    suspend fun updateTask(@Body taskDto: TaskPlannerDto, @Path("id") id: String): Response<TaskPlannerDto>
 
 
 }

@@ -1,3 +1,35 @@
 <resources>
     <string name="app_name">TaskPlanner</string>
+    <string name="app_name">Task Planner App</string>
+    <string name="action_settings">Settings</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="task_list_fragment_label">Tasks List</string>
+    <string name="task_form_fragment_label">Task Form</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="action_logout">logout</string>
+    <string name="email">email</string>
+    <string name="password">password</string>
+    <string name="create_account">Create account</string>
+    <string name="invalid_email">Invalid email</string>
+    <string name="empty_password_field">password must not be empty</string>
+    <string name="empty_field_error">field must not be empty</string>
+    <string name="save">Save</string>
+    <string name="name">name</string>
+    <string name="description">description</string>
+    <string name="due_date">due date</string>
+    <string name="assigned_to">assigned to</string>
+    <string name="status">status</string>
+    <string name="login">Login</string>
+
+    <string-array name="task_status_array">
+        <item>TODO</item>
+        <item>IN_PROGRESS</item>
+        <item>REVIEW</item>
+        <item>DONE</item>
+    </string-array>
+
 </resources>
