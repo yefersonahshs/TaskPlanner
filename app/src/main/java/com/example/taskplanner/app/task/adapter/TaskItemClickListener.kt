@@ -1,4 +1,4 @@
-package org.adaschool.taskplanner.ui.task.adapter
+package com.example.taskplanner.app.task.adapter
 
 import com.example.taskplanner.data.entity.Task
 

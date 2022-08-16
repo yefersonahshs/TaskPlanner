@@ -3,9 +3,9 @@ package com.example.taskplanner.app.login
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.example.taskplanner.app.activity.TasksActivity
 import com.example.taskplanner.storage.Storage
 import dagger.hilt.android.AndroidEntryPoint
-import org.adaschool.taskplanner.ui.task.activity.TasksActivity
 import javax.inject.Inject
 
 

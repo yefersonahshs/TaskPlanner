@@ -12,7 +12,7 @@ interface TaskService {
 
 
     @GET("/api/task/all")
-    suspend fun getTaskList(): Response<TaskPlannerDto>
+    suspend fun getTaskList(): Response<List<TaskPlannerDto>>
 
     @POST("api/task")
     suspend fun saveTask(@Body taskDto: TaskPlannerDto): Response<TaskPlannerDto>

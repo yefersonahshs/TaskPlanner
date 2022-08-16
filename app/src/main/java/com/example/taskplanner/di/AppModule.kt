@@ -1,5 +1,6 @@
 package com.example.taskplanner.di
 
+import com.example.taskplanner.service.AuthService
 import com.example.taskplanner.service.TaskService
 import com.example.taskplanner.storage.JWTInterceptor
 import com.example.taskplanner.storage.Storage
@@ -10,6 +11,8 @@ import dagger.Provides
 import dagger.hilt.InstallIn
 import javax.inject.Singleton
 import dagger.hilt.components.SingletonComponent
+import kotlinx.coroutines.CoroutineDispatcher
+import kotlinx.coroutines.Dispatchers
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
 import retrofit2.Retrofit
@@ -52,4 +55,16 @@ object AppModule {
         return retrofit.create(TaskService::class.java)
     }
 
+    @Provides
+    @Singleton
+    fun provideAuthService(retrofit: Retrofit): AuthService {
+        return retrofit.create(AuthService::class.java)
+    }
+
+
+    @Provides
+    @Singleton
+    fun provideCoroutineDispatcher(): CoroutineDispatcher {
+        return Dispatchers.IO
+    }
 }

@@ -7,9 +7,9 @@ import android.view.View
 import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
 import com.example.taskplanner.R
+import com.example.taskplanner.app.activity.TasksActivity
 import com.example.taskplanner.databinding.ActivityLoginBinding
 import dagger.hilt.android.AndroidEntryPoint
-import org.adaschool.taskplanner.ui.task.activity.TasksActivity
 
 
 @AndroidEntryPoint

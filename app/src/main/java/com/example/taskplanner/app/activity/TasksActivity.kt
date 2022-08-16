@@ -1,4 +1,4 @@
-package org.adaschool.taskplanner.ui.task.activity
+package com.example.taskplanner.app.activity
 
 import android.content.Intent
 import android.os.Bundle
@@ -10,11 +10,12 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
+import com.example.taskplanner.R
+import com.example.taskplanner.app.login.LoginActivity
+import com.example.taskplanner.app.task.viewmodel.TaskViewModel
+import com.example.taskplanner.databinding.ActivityTasksBinding
 import dagger.hilt.android.AndroidEntryPoint
-import org.adaschool.taskplanner.R
-import org.adaschool.taskplanner.databinding.ActivityTasksBinding
-import org.adaschool.taskplanner.ui.login.LoginActivity
-import org.adaschool.taskplanner.ui.task.viewmodel.TaskViewModel
+
 
 @AndroidEntryPoint
 class TasksActivity : AppCompatActivity() {

@@ -8,7 +8,6 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.taskplanner.R
 import com.example.taskplanner.data.entity.Task
-import org.adaschool.taskplanner.ui.task.adapter.TaskItemClickListener
 
 
 class TasksAdapter(private val taskItemClickListener: TaskItemClickListener) :

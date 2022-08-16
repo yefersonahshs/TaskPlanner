@@ -9,12 +9,12 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.taskplanner.R
+import com.example.taskplanner.app.task.adapter.TaskItemClickListener
 import com.example.taskplanner.app.task.adapter.TasksAdapter
 import com.example.taskplanner.app.task.viewmodel.TaskViewModel
 import com.example.taskplanner.data.entity.Task
 import com.example.taskplanner.databinding.FragmentTaskListBinding
 import dagger.hilt.android.AndroidEntryPoint
-import org.adaschool.taskplanner.ui.task.adapter.TaskItemClickListener
 
 
 @AndroidEntryPoint

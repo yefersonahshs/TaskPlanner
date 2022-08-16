@@ -4,7 +4,9 @@ interface Storage {
 
     fun saveToken(token: String)
 
-    fun getToken(): String?
+    fun getToken(): String
 
     fun clear()
+
+    fun isUserAuth(): Boolean
 }

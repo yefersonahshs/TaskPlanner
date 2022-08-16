@@ -24,7 +24,7 @@ class SharedPreferencesStorage(private val sharedPreferences: SharedPreferences)
             .apply()
     }
 
-    fun isUserAuth(): Boolean {
+    override fun isUserAuth(): Boolean {
         return getToken().isNotEmpty()
     }
 

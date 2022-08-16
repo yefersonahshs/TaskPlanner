@@ -19,7 +19,6 @@
       android:layout_height="wrap_content"
       android:layout_gravity="end"
       android:padding="10dp"
-      android:src="@drawable/ic_action_sync_problem"
       android:visibility="gone"
       tools:visibility="visible" />
 

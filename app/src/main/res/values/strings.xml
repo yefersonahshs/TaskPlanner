@@ -1,6 +1,5 @@
 <resources>
     <string name="app_name">TaskPlanner</string>
-    <string name="app_name">Task Planner App</string>
     <string name="action_settings">Settings</string>
     <!-- Strings used for fragments for navigation -->
     <string name="task_list_fragment_label">Tasks List</string>
