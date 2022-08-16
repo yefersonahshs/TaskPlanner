@@ -1,6 +1,8 @@
 package com.example.taskplanner.di
 
 import com.example.taskplanner.service.TaskService
+import com.example.taskplanner.storage.JWTInterceptor
+import com.example.taskplanner.storage.Storage
 import com.google.gson.GsonBuilder
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import dagger.Module
@@ -22,13 +24,12 @@ object AppModule {
 
     @Singleton
     @Provides
-    fun getInstance(): Retrofit {
+    fun getInstance(storage: Storage): Retrofit {
         val loggingInterceptor = HttpLoggingInterceptor()
         loggingInterceptor.level = HttpLoggingInterceptor.Level.BODY
         val okHttpClient = OkHttpClient.Builder()
             .addInterceptor(loggingInterceptor)
-            .addInterceptor(loggingInterceptor)
-            .addInterceptor(jwtInterceptor)
+            .addInterceptor(JWTInterceptor(storage))
             .writeTimeout(0, TimeUnit.MILLISECONDS)
             .readTimeout(2, TimeUnit.MINUTES)
             .connectTimeout(1, TimeUnit.MINUTES).build()

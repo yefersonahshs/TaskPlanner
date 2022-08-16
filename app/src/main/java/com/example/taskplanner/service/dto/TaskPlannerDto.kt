@@ -1,14 +1,25 @@
 package com.example.taskplanner.service.dto
 
+import com.example.taskplanner.data.entity.Task
 import com.google.gson.annotations.SerializedName
+import java.util.*
 
-data class TaskPlannerDto (
+data class TaskPlannerDto(
 
-    @SerializedName("id"          ) var id          : String? = null,
-    @SerializedName("name"        ) var name        : String? = null,
-    @SerializedName("description" ) var description : String? = null,
-    @SerializedName("status"      ) var status      : String? = null,
-    @SerializedName("assignedTo"  ) var assignedTo  : String? = null,
-    @SerializedName("dueDate"     ) var dueDate     : String? = null
+    @SerializedName("id"          ) var id: String?,
+    @SerializedName("name"        ) var name: String,
+    @SerializedName("description" ) var description: String,
+    @SerializedName("status"      ) var status: StatusEnum ,
+    @SerializedName("assignedTo"  ) var assignedTo: String,
+    @SerializedName("dueDate"     ) var dueDate:  Date
 
-)
+){
+    constructor(task: Task) : this(
+        null,
+        task.name,
+        task.description,
+        StatusEnum.valueOf(task.status),
+        task.assignedTo,
+        task.dueDate
+    )
+}

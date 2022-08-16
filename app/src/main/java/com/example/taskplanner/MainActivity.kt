@@ -38,6 +38,7 @@ class MainActivity : AppCompatActivity() {
             }
 
         }
+
         GlobalScope.launch(Dispatchers.IO) {
             val response = taskService.getTaskList()
             if (response.isSuccessful){
